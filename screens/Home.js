@@ -50,7 +50,10 @@ const Home = () => {
           source={HeroImage}
           className="w-full h-full object-cover mt-20"
         />
-        <TouchableOpacity className="absolute bottom-20 h-24 w-24 border-l-2 border-r-2 border-t-4 rounded-full items-center justify-center border-[#00BCC9]">
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Discover")}
+          className="absolute bottom-20 h-24 w-24 border-l-2 border-r-2 border-t-4 rounded-full items-center justify-center border-[#00BCC9]"
+        >
           <Animatable.View
             animation="pulse"
             easing="ease-in-out"
