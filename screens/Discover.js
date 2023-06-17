@@ -30,13 +30,13 @@ const Discover = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    getPlacesData().then((data) => {
+    getPlacesData(type).then((data) => {
       setMainData(data);
       setInterval(() => {
         setIsLoading(false);
       }, 2000);
     });
-  }, []);
+  }, [type]);
 
   return (
     <SafeAreaView className="flex-1 relative bg-white">
@@ -125,7 +125,7 @@ const Discover = () => {
                       imgSrc={
                         data?.photo?.images?.medium?.url
                           ? data?.photo?.images?.medium?.url
-                          : "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg"
+                          : "https://st3.depositphotos.com/23594922/31822/v/450/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg"
                       }
                       title={data?.name}
                       location={data?.location_string}

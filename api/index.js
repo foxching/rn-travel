@@ -1,11 +1,11 @@
 import axios from "axios";
 
-export const getPlacesData = async () => {
+export const getPlacesData = async (type) => {
   try {
     const {
       data: { data },
     } = await axios.get(
-      `https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng`,
+      `https://travel-advisor.p.rapidapi.com/${type}/list-by-latlng`,
       {
         params: {
           latitude: "9.672948",
